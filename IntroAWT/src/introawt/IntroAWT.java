@@ -17,7 +17,7 @@ public class IntroAWT {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Ventana ven1 = new Ventana("Hola Mundo GUI Java", 600, 400);
+        Ventana ven1 = new Ventana("Hola Mundo GUI", 600, 400);
         ven1.setVisible(true);
     }
     

@@ -5,6 +5,7 @@
  */
 package ico.fes.poo.gui;
 
+import ico.fes.poo.gui.Eventos.EventosVentana;
 import java.awt.Button;
 import java.awt.FlowLayout;
 import java.awt.Frame;
@@ -31,8 +32,10 @@ public class Ventana extends Frame {
         this.setSize(alto, ancho);
         boton1 = new Button("Presioname 1");
         boton2 = new Button("Presioname 2");
-        this.setLayout(new FlowLayout());
+        this.setLayout(new FlowLayout(FlowLayout.RIGHT));
         this.add(boton1);
+        this.add(boton2);
+        this.addWindowListener(new EventosVentana());
     }
 
     public String getTitulo() {
