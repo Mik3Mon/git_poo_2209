@@ -7,35 +7,49 @@ package ico.fes.poo.gui;
 
 import ico.fes.poo.gui.Eventos.EventosVentana;
 import java.awt.Button;
-import java.awt.FlowLayout;
 import java.awt.Frame;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.HeadlessException;
 
 /**
  *
  * @author dmathews
  */
-public class Ventana extends Frame {
+public class Ventana4 extends Frame {
     private String titulo;
     private int alto;
     private int ancho;
     private Button boton1;
     private Button boton2;
+    private Button boton3;
+    private Button boton4;
+    private Button boton5;
     
-    public Ventana() throws HeadlessException {
+    public Ventana4() throws HeadlessException {
     }
 
-    public Ventana(String titulo, int alto, int ancho) throws HeadlessException {
+    public Ventana4(String titulo, int alto, int ancho) throws HeadlessException {
         this.titulo = titulo;
         this.alto = alto;
         this.ancho = ancho;
         this.setSize(alto, ancho);
         this.setTitle(titulo);
+        setResizable(true);
         boton1 = new Button("Presioname 1");
         boton2 = new Button("Presioname 2");
-        this.setLayout(new FlowLayout(FlowLayout.RIGHT));
+        boton3 = new Button("Presioname 3");
+        boton4 = new Button("Presioname 4");
+        boton5 = new Button("Presioname 5");
+        this.setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.weightx = 1.0;
         this.add(boton1);
         this.add(boton2);
+        this.add(boton3);
+        this.add(boton4);
+        this.add(boton5);
         this.addWindowListener(new EventosVentana());
     }
 
