@@ -17,7 +17,7 @@ public class VentanaSaludo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Saludo sal1 = new Saludo("Ventana Saludo", 600, 400);
+        Saludo sal1 = new Saludo("Ventana Saludo", 600, 200);
         sal1.setVisible(true);
     }
     
