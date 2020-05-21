@@ -5,6 +5,7 @@
  */
 package ico.fes.poo.gui;
 
+import ico.fes.poo.model.ModeloCombo;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.event.MouseAdapter;
@@ -16,6 +17,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
@@ -43,7 +45,7 @@ public class Ventana extends JFrame {
     
     public Ventana() {
         super("Muestrario de componentes swing");
-        super.setSize(400,400);
+        super.setSize(600,600);
         super.getContentPane().setLayout(new FlowLayout());
         etiqueta = new JLabel("Hola Swing");
         boton1 = new JButton("Show Message");
@@ -60,7 +62,23 @@ public class Ventana extends JFrame {
         super.getContentPane().add(boton3);
         super.getContentPane().add(boton4);
         super.getContentPane().add(area);
+        super.getContentPane().add(boton5);
         super.getContentPane().add(combo);
+        
+        boton5.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                ArrayList<String> frutas = new ArrayList();
+                frutas.add("Piña");
+                frutas.add("Sandia");
+                frutas.add("Naranja");
+                frutas.add("Melon");
+                frutas.add("Kiwi");
+                frutas.add("Aguacate");
+                ModeloCombo model = new ModeloCombo(frutas, "");
+                combo.setModel(model);
+            }     
+        });
         
         boton4.addMouseListener(new MouseAdapter() {
             @Override
