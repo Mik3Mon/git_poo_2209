@@ -8,6 +8,7 @@ package ico.fes.poo.gui;
 import ico.fes.poo.modelo.Comic;
 import ico.fes.poo.modelo.ModeloTablaComic;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -68,6 +69,7 @@ public class VentanaTabla extends javax.swing.JFrame {
                 .addContainerGap(66, Short.MAX_VALUE))
         );
 
+        jTable1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTable1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -82,6 +84,11 @@ public class VentanaTabla extends javax.swing.JFrame {
         ));
         jTable1.setShowHorizontalLines(false);
         jTable1.setShowVerticalLines(false);
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -111,9 +118,16 @@ public class VentanaTabla extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         ArrayList<Comic> lista = new ArrayList();
         lista.add(new Comic(2, 1, "Marvel", "Planeta", "Spideman", "Cazado vol 1", 200.0f));
+        lista.add(new Comic(2, 3, "Marvel", "Clarin", "Capitan America", "Primer Vengador", 300.0f));
+        lista.add(new Comic(1, 5, "DC", "Metropolis", "Superman", "Returns", 100.0f));
+        
         ModeloTablaComic modelo = new ModeloTablaComic(lista);
         jTable1.setModel(modelo);
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        JOptionPane.showMessageDialog(this, "Renglon: " + jTable1.getSelectedRow() + "Columna: " + jTable1.getSelectedColumn());
+    }//GEN-LAST:event_jTable1MouseClicked
 
     /**
      * @param args the command line arguments
