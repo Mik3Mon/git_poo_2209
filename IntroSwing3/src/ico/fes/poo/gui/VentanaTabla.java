@@ -111,7 +111,6 @@ public class VentanaTabla extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         ArrayList<Comic> lista = new ArrayList();
         lista.add(new Comic(2, 1, "Marvel", "Planeta", "Spideman", "Cazado vol 1", 200.0f));
-        lista.add(new Comic(1, 1, "Marvel", "Yo", "Ironman", "Muerto", 200.0f));
         ModeloTablaComic modelo = new ModeloTablaComic(lista);
         jTable1.setModel(modelo);
     }//GEN-LAST:event_jButton1MouseClicked
