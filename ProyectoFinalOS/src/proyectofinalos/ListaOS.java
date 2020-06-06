@@ -280,21 +280,34 @@ public class ListaOS extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-       OperativeSystem nuevo = new OperativeSystem();
-       nuevo.setNombre(jTextField1.getText());
-       nuevo.setArquitectura(jTextField2.getText());
-       nuevo.setVersionKernel(jTextField3.getText());
-       nuevo.setLicencia(jTextField4.getText());
-       nuevo.setMultiusuario((String)jComboBox1.getSelectedItem());
-       nuevo.setMultitareas((String) jComboBox2.getSelectedItem());
-       modelo.agregarOS(nuevo);
-       jTextField1.setText("");
-       jTextField2.setText("");
-       jTextField3.setText("");
-       jTextField4.setText("");
-       jComboBox1.setSelectedIndex(0);
-       jComboBox2.setSelectedIndex(0);
-       
+        OperativeSystem nuevo = new OperativeSystem();
+        String opcion = (String)jComboBox1.getSelectedItem();
+        String opcion2 = (String)jComboBox2.getSelectedItem();
+        
+        while(jButton2.isEnabled()) {
+            if(opcion.equals("Seleccionar:")) {
+                JOptionPane.showMessageDialog(this, "Selecciona una opcion valida");
+            }
+            if(opcion2.equals("Seleccionar:")) {
+                JOptionPane.showMessageDialog(this, "Selecciona una opcion valida");
+            }
+        }
+        
+        nuevo.setNombre(jTextField1.getText());
+        nuevo.setArquitectura(jTextField2.getText());
+        nuevo.setVersionKernel(jTextField3.getText());
+        nuevo.setLicencia(jTextField4.getText());
+        nuevo.setMultiusuario((String)jComboBox1.getSelectedItem());
+        nuevo.setMultitareas((String) jComboBox2.getSelectedItem());
+        
+        modelo.agregarOS(nuevo);
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
+        jTextField4.setText("");
+        jComboBox1.setSelectedIndex(0);
+        jComboBox2.setSelectedIndex(0);
+        
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked

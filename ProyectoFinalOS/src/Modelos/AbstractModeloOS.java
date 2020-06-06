@@ -139,9 +139,4 @@ public class AbstractModeloOS extends AbstractTableModel{
         data.add(c);
         this.fireTableDataChanged();
     }
-
-    public void elimnarOS(int c) {
-        data.remove(c);
-        this.fireTableDataChanged();
-    }
 }
