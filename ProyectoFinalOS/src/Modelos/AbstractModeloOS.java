@@ -100,7 +100,7 @@ public class AbstractModeloOS extends AbstractTableModel{
             case 4:
                 return tmp.getMultiusuario();
             case 5:
-                return tmp.getMultiusuario();
+                return tmp.getMultitareas();
             default:
                 return null;
         }
@@ -137,6 +137,11 @@ public class AbstractModeloOS extends AbstractTableModel{
     
     public void agregarOS(OperativeSystem c) {
         data.add(c);
+        this.fireTableDataChanged();
+    }
+
+    public void elimnarOS(int c) {
+        data.remove(c);
         this.fireTableDataChanged();
     }
 }
