@@ -283,16 +283,23 @@ public class ListaOS extends javax.swing.JFrame {
         OperativeSystem nuevo = new OperativeSystem();
         String opcion = (String)jComboBox1.getSelectedItem();
         String opcion2 = (String)jComboBox2.getSelectedItem();
-        
-        while(jButton2.isEnabled()) {
-            if(opcion.equals("Seleccionar:")) {
-                JOptionPane.showMessageDialog(this, "Selecciona una opcion valida");
-            }
-            if(opcion2.equals("Seleccionar:")) {
-                JOptionPane.showMessageDialog(this, "Selecciona una opcion valida");
-            }
+        if(jTextField1.getText().isEmpty()||jTextField2.getText().equals("")||jTextField3.getText().equals("")||jTextField4.getText().equals("")){
+            if(jTextField1.getText().isEmpty())
+                JOptionPane.showMessageDialog(this, "El campo Nombre es obligatorio");
+            if(jTextField2.getText().isEmpty())
+                JOptionPane.showMessageDialog(this, "El campo Arquitectura es obligatorio");
+            if(jTextField3.getText().isEmpty())
+                JOptionPane.showMessageDialog(this, "El campo Version Kernel es obligatorio");
+            if(jTextField4.getText().isEmpty())
+                JOptionPane.showMessageDialog(this, "El campo Licencia es obligatorio");
         }
-        
+        else if(opcion.equals("Seleccionar:")) {
+            JOptionPane.showMessageDialog(this, "Selecciona en Multiusuario Si o No");
+        }
+        else if(opcion2.equals("Seleccionar:")) {
+            JOptionPane.showMessageDialog(this, "Selecciona en Multitarea Si o No");
+        }
+        else {
         nuevo.setNombre(jTextField1.getText());
         nuevo.setArquitectura(jTextField2.getText());
         nuevo.setVersionKernel(jTextField3.getText());
@@ -307,6 +314,23 @@ public class ListaOS extends javax.swing.JFrame {
         jTextField4.setText("");
         jComboBox1.setSelectedIndex(0);
         jComboBox2.setSelectedIndex(0);
+            
+        }
+        
+        /*nuevo.setNombre(jTextField1.getText());
+        nuevo.setArquitectura(jTextField2.getText());
+        nuevo.setVersionKernel(jTextField3.getText());
+        nuevo.setLicencia(jTextField4.getText());
+        nuevo.setMultiusuario((String)jComboBox1.getSelectedItem());
+        nuevo.setMultitareas((String) jComboBox2.getSelectedItem());
+        
+        modelo.agregarOS(nuevo);
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
+        jTextField4.setText("");
+        jComboBox1.setSelectedIndex(0);
+        jComboBox2.setSelectedIndex(0);*/
         
     }//GEN-LAST:event_jButton2MouseClicked
 
