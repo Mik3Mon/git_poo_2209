@@ -36,7 +36,6 @@ public class ListaOS extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -79,14 +78,6 @@ public class ListaOS extends javax.swing.JFrame {
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
-            }
-        });
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("Presioname");
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
             }
         });
 
@@ -143,16 +134,13 @@ public class ListaOS extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton1)
                         .addGap(40, 40, 40)
                         .addComponent(jLabel1)
-                        .addGap(141, 141, 141)
-                        .addComponent(jLabel2)
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel3)
-                        .addContainerGap())
+                        .addGap(96, 96, 96)
+                        .addComponent(jLabel3))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
@@ -169,10 +157,10 @@ public class ListaOS extends javax.swing.JFrame {
                                 .addComponent(jTextField2)
                                 .addComponent(jTextField3)
                                 .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE))
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2)
-                        .addGap(130, 130, 130))))
+                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(130, 130, 130))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -181,7 +169,6 @@ public class ListaOS extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel2)
                     .addComponent(jLabel3))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -249,7 +236,7 @@ public class ListaOS extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 640, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1)
                     .addComponent(jScrollPane2))
                 .addContainerGap())
         );
@@ -284,14 +271,7 @@ public class ListaOS extends javax.swing.JFrame {
         String opcion = (String)jComboBox1.getSelectedItem();
         String opcion2 = (String)jComboBox2.getSelectedItem();
         if(jTextField1.getText().isEmpty()||jTextField2.getText().equals("")||jTextField3.getText().equals("")||jTextField4.getText().equals("")){
-            if(jTextField1.getText().isEmpty())
-                JOptionPane.showMessageDialog(this, "El campo Nombre es obligatorio");
-            if(jTextField2.getText().isEmpty())
-                JOptionPane.showMessageDialog(this, "El campo Arquitectura es obligatorio");
-            if(jTextField3.getText().isEmpty())
-                JOptionPane.showMessageDialog(this, "El campo Version Kernel es obligatorio");
-            if(jTextField4.getText().isEmpty())
-                JOptionPane.showMessageDialog(this, "El campo Licencia es obligatorio");
+            JOptionPane.showMessageDialog(this, "Todos los campos son obligatorios");
         }
         else if(opcion.equals("Seleccionar:")) {
             JOptionPane.showMessageDialog(this, "Selecciona en Multiusuario Si o No");
@@ -316,40 +296,14 @@ public class ListaOS extends javax.swing.JFrame {
         jComboBox2.setSelectedIndex(0);
             
         }
-        
-        /*nuevo.setNombre(jTextField1.getText());
-        nuevo.setArquitectura(jTextField2.getText());
-        nuevo.setVersionKernel(jTextField3.getText());
-        nuevo.setLicencia(jTextField4.getText());
-        nuevo.setMultiusuario((String)jComboBox1.getSelectedItem());
-        nuevo.setMultitareas((String) jComboBox2.getSelectedItem());
-        
-        modelo.agregarOS(nuevo);
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField3.setText("");
-        jTextField4.setText("");
-        jComboBox1.setSelectedIndex(0);
-        jComboBox2.setSelectedIndex(0);*/
-        
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        jLabel1.setText("");
-        ImageIcon icon = new ImageIcon(System.getProperty("user.dir")+"/src/Apple.png");
-        jLabel1.setIcon(icon);
+        JOptionPane.showMessageDialog(this, "Apple usa sistemas operativos como:\n MacOS, iOS, WatchOS y iPadOS", "Ejemplo de OS", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(System.getProperty("user.dir")+"/src/Apple.png"));        
     }//GEN-LAST:event_jLabel1MouseClicked
 
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-        jLabel2.setText("");
-        ImageIcon icon = new ImageIcon(System.getProperty("user.dir")+"/src/Mac.png");
-        jLabel2.setIcon(icon);
-    }//GEN-LAST:event_jLabel2MouseClicked
-
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-        jLabel3.setText("");
-        ImageIcon icon = new ImageIcon(System.getProperty("user.dir")+"/src/Windows.png");
-        jLabel3.setIcon(icon);
+        JOptionPane.showMessageDialog(this, "Microsoft usa el sistema operativo:\n Windows y WindosPhone", "Ejemplo de OS", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(System.getProperty("user.dir")+"/src/Windows.png"));        
     }//GEN-LAST:event_jLabel3MouseClicked
 
     /**
@@ -393,7 +347,6 @@ public class ListaOS extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
