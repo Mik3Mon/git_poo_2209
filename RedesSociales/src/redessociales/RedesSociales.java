@@ -5,6 +5,9 @@
  */
 package redessociales;
 
+import Modelos.Controlador;
+import Modelos.ModeloExcel;
+
 /**
  *
  * @author dmathews
@@ -15,7 +18,9 @@ public class RedesSociales {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        ModeloExcel ModeloEx = new ModeloExcel();
+        PresenciaRedesSociales PRS = new PresenciaRedesSociales();
+        Controlador ControlEx = new Controlador(PRS, ModeloEx);
     }
     
 }
