@@ -403,10 +403,13 @@ public class PresenciaRedesSociales extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "1. Con el boton cargar puedes abrir cualquier doc excel (ABRE EL ARCHIVO DE TAREA)\n"
                 + "2. En la parte inferior hay campos de texto que permiten recopilar datos para el calculo de\n"
                 + " diferencia de seguidores, diferencia de vistas y promedio de crecimiento\n"
+                + "(PARA CALCULAR LAS DIFERENCIAS SOLO HAY QUE INGRESAR LOS VALORES DE LOS MESES QUE DESEEMOS)\n"
                 + "(LA DIFERENCIA DE SEGUIDORES DE FACEBOOK Y TWTTIER SE CALCULA POR SEPARADO)\n"
                 + "(PRIMERO CALCULA EL DE FACEBOOK Y DESPUES EL DE TWITTER)\n"
+                + "(LA DIFERENCIA DE VISUALIZACIONES TIENE SU PROPIO CAMPO DE IGUAL FORMA ESCOGES LOS DATOS DE LOS MESES DESEADOS)\n"
+                + "(SE RECOMIENDA ESCRIBIR PRIMERO EL TERMINO MAS GRANDE EN LOS CAMPOS DE DIFERENCIAS)\n"
                 + "3. El calculo sirve para cualquiera de los campos mostrados en la tabla\n"
-                + "");
+                + "4. Este programa te permite calcular el promedio de crecimiento de cualquier dato de la tabla");
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
