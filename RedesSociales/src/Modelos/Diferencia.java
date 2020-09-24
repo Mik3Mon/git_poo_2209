@@ -10,43 +10,35 @@ package Modelos;
  * @author dmathews
  */
 public class Diferencia {
-    private float num1;
-    private float num2;
-    private float res;
+    int numero1;
+    int numero2;
 
     public Diferencia() {
     }
 
-    public Diferencia(float num1, float num2, float res) {
-        this.num1 = num1;
-        this.num2 = num2;
-        this.res = res;
-    }
-
-    public float getNum1() {
-        return num1;
-    }
-
-    public void setNum1(float num1) {
-        this.num1 = num1;
-    }
-
-    public float getNum2() {
-        return num2;
-    }
-
-    public void setNum2(float num2) {
-        this.num2 = num2;
-    }
-
-    public float getRes() {
-        return res;
-    }
-
-    public void setRes(float res) {
-        this.res = res;
+    public Diferencia(int numero1, int numero2) {
+        this.numero1 = numero1;
+        this.numero2 = numero2;
     }
     
-    
+    public int dife() {
+        return getNumero1()-getNumero2();
+    }
+
+    public int getNumero1() {
+        return numero1;
+    }
+
+    public void setNumero1(int numero1) {
+        this.numero1 = numero1;
+    }
+
+    public int getNumero2() {
+        return numero2;
+    }
+
+    public void setNumero2(int numero2) {
+        this.numero2 = numero2;
+    }
     
 }

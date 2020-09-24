@@ -10,81 +10,76 @@ package Modelos;
  * @author dmathews
  */
 public class Promedio {
-    private float v1;
-    private float v2;
-    private float v3;
-    private float v4;
-    private float v5;
-    private float v6;
-    private float prom;
+    float num1;
+    float num2;
+    float num3;
+    float num4;
+    float num5;
+    float num6;
 
     public Promedio() {
     }
 
-    public Promedio(float v1, float v2, float v3, float v4, float v5, float v6, float prom) {
-        this.v1 = v1;
-        this.v2 = v2;
-        this.v3 = v3;
-        this.v4 = v4;
-        this.v5 = v5;
-        this.v6 = v6;
-        this.prom = prom;
+    public Promedio(float num1, float num2, float num3, float num4, float num5, float num6) {
+        this.num1 = num1;
+        this.num2 = num2;
+        this.num3 = num3;
+        this.num4 = num4;
+        this.num5 = num5;
+        this.num6 = num6;
+    }
+    
+    public float Sum() {
+        return getNum1()+getNum2()+getNum3()+getNum4()+getNum5()+getNum6();
     }
 
-    public float getV1() {
-        return v1;
+    public float getNum1() {
+        return num1;
     }
 
-    public void setV1(float v1) {
-        this.v1 = v1;
+    public void setNum1(float num1) {
+        this.num1 = num1;
     }
 
-    public float getV2() {
-        return v2;
+    public float getNum2() {
+        return num2;
     }
 
-    public void setV2(float v2) {
-        this.v2 = v2;
+    public void setNum2(float num2) {
+        this.num2 = num2;
     }
 
-    public float getV3() {
-        return v3;
+    public float getNum3() {
+        return num3;
     }
 
-    public void setV3(float v3) {
-        this.v3 = v3;
+    public void setNum3(float num3) {
+        this.num3 = num3;
     }
 
-    public float getV4() {
-        return v4;
+    public float getNum4() {
+        return num4;
     }
 
-    public void setV4(float v4) {
-        this.v4 = v4;
+    public void setNum4(float num4) {
+        this.num4 = num4;
     }
 
-    public float getV5() {
-        return v5;
+    public float getNum5() {
+        return num5;
     }
 
-    public void setV5(float v5) {
-        this.v5 = v5;
+    public void setNum5(float num5) {
+        this.num5 = num5;
     }
 
-    public float getV6() {
-        return v6;
+    public float getNum6() {
+        return num6;
     }
 
-    public void setV6(float v6) {
-        this.v6 = v6;
+    public void setNum6(float num6) {
+        this.num6 = num6;
     }
-
-    public float getProm() {
-        return prom;
-    }
-
-    public void setProm(float prom) {
-        this.prom = prom;
-    }
+    
     
 }
